@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダム散歩先提案アプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>ランダム散歩先提案アプリ</h1>
+    <p>現在地周辺の施設をランダムに提案します。</p>
+
+    <div id="controls">
+        <div id="category-selector">
+            <p>カテゴリを選択してください:</p>
+            <button class="category-btn selected" data-category="cafe" data-category-ja="カフェ">カフェ</button>
+            <button class="category-btn" data-category="restaurant" data-category-ja="レストラン">レストラン</button>
+            <button class="category-btn" data-category="park" data-category-ja="公園">公園</button>
+        </div>
+        <button id="find-place-btn">近くの場所を探す</button>
+    </div>
+
+    <div id="result">
+        <h2>おすすめの場所</h2>
+        <p id="place-name">ここに場所の名前が表示されます</p>
+        <p id="place-info"></p>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="js/logger.js"></script>
+    <script src="js/google-maps.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Google Maps APIのスクリプトはAPIキー設定後にmain.js経由で動的に読み込みます -->
+</body>
+</html>
